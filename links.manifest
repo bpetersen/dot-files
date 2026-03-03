@@ -1,0 +1,7 @@
+# source_relative_path|destination_path
+# destination supports $HOME expansion
+
+tmux.conf|$HOME/.tmux.conf
+zshrc|$HOME/.zshrc
+prettierrc.yaml|$HOME/.prettierrc.yaml
+Brewfile|$HOME/Brewfile
