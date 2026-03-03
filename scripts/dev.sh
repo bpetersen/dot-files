@@ -3,12 +3,11 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-if [ "${1:-}" = "" ]; then
-  echo "Usage: rundev <repo-name>"
-  exit 1
+repo_dir="$HOME/Repos"
+if [ -n "${1:-}" ]; then
+  repo_dir="$repo_dir/$1"
 fi
 
-repo_dir="$HOME/Repos/$1"
 if [ ! -d "$repo_dir" ]; then
   echo "Repository directory not found: $repo_dir"
   exit 1
