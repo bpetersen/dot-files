@@ -1,4 +1,4 @@
-# dotFiles
+# dot-files
 
 Personal shell/editor/terminal bootstrap for macOS or Linux with Homebrew.
 
@@ -16,8 +16,8 @@ Personal shell/editor/terminal bootstrap for macOS or Linux with Homebrew.
 ## Quick start
 
 ```bash
-git clone <your-repo-url> ~/Repos/dotFiles
-cd ~/Repos/dotFiles
+git clone <your-repo-url> ~/Repos/dot-files
+cd ~/Repos/dot-files
 bash init.sh all
 ```
 
@@ -36,7 +36,7 @@ After setup completes, restart your terminal.
 You can re-run setup after updating this repo:
 
 ```bash
-cd ~/Repos/dotFiles
+cd ~/Repos/dot-files
 bash init.sh all
 ```
 

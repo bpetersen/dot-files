@@ -6,7 +6,7 @@ export LSCOLORS='GxFxCxDxBxegedabagaced'
 setopt prompt_subst
 autoload -Uz colors && colors
 
-alias rundev='~/Repos/dotFiles/scripts/dev.sh'
+alias rundev='~/Repos/dot-files/scripts/dev.sh'
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
