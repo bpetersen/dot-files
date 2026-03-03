@@ -116,10 +116,12 @@ phase_core() {
   run mkdir -p "$HOME/.config" "$HOME/.config/nvim" "$HOME/.config/prettier"
 
   if [ -d "$HOME/.config/nvim/.git" ]; then
-    log "Neovim repo already exists at ~/.config/nvim; skipping clone."
+    log "Neovim repo already exists at ~/.config/nvim; ensuring develop branch."
+    run git -C "$HOME/.config/nvim" fetch origin develop
+    run git -C "$HOME/.config/nvim" checkout develop
   elif [ -z "$(ls -A "$HOME/.config/nvim" 2>/dev/null)" ]; then
-    log "Cloning kickstart.nvim into ~/.config/nvim"
-    run git clone git@github.com:bpetersen/kickstart.nvim.git "$HOME/.config/nvim"
+    log "Cloning kickstart.nvim (develop) into ~/.config/nvim"
+    run git clone --branch develop --single-branch git@github.com:bpetersen/kickstart.nvim.git "$HOME/.config/nvim"
   else
     warn "~/.config/nvim exists and is non-empty; skipping kickstart.nvim clone."
   fi
